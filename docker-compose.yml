@@ -24,6 +24,8 @@ services:
     image: postgres:11 # FYI: https://devcenter.heroku.com/ja/articles/heroku-postgresql#version-support
     ports:
       - "5432:5432"
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust # FYI: https://github.com/docker-library/postgres/issues/681#issuecomment-586517154
   redis:
     image: redis:6 # FYI: https://devcenter.heroku.com/articles/heroku-redis#version-support-and-legacy-infrastructure
     ports:
