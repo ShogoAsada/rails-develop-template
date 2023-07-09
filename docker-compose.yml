@@ -21,7 +21,7 @@ services:
     depends_on:
       - worker
   postgres:
-    image: postgres:11 # FYI: https://devcenter.heroku.com/ja/articles/heroku-postgresql#version-support
+    image: postgres:15 # FYI: https://devcenter.heroku.com/ja/articles/heroku-postgres-version-support#version-support
     ports:
       - "5432:5432"
     environment:
